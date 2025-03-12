@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Traditions of India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffcc80;
+            text-align: center;
+            color: #6d1b00;
+        }
+        header {
+            background-color: #ff7043;
+            padding: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
+        img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+        .menu {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            background-color: #ffe0b2;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        function showInfo(value) {
+            const info = document.getElementById('info');
+            const descriptions = {
+                'Diwali': 'Diwali, the festival of lights, is celebrated with diyas, fireworks, and sweets.',
+                'Holi': 'Holi, the festival of colors, marks the arrival of spring with vibrant celebrations.',
+                'Pongal': 'Pongal is a harvest festival celebrated in Tamil Nadu with traditional dishes.',
+                'Navratri': 'Navratri is a nine-day festival dedicated to Goddess Durga, celebrated with dance and fasting.',
+                'Bharatanatyam': 'Bharatanatyam is a classical dance form originating from Tamil Nadu.',
+                'Kathak': 'Kathak is a North Indian classical dance form known for its storytelling gestures.',
+                'Kuchipudi': 'Kuchipudi is a dance-drama performance art from Andhra Pradesh.',
+                'Odissi': 'Odissi is a classical dance form from Odisha with graceful movements.',
+                'Saree': 'The saree is a traditional Indian garment worn by women across various regions.',
+                'Dhoti': 'Dhoti is a traditional attire worn by men, especially in South India.',
+                'Kurta-Pajama': 'Kurta-Pajama is a comfortable and elegant outfit for men.',
+                'Lehenga': 'Lehenga is a festive and bridal attire adorned with embroidery.',
+                'Taj Mahal': 'The Taj Mahal is a UNESCO World Heritage Site and a symbol of love.',
+                'Hampi': 'Hampi is an ancient city known for its magnificent ruins and temples.',
+                'Sun Temple': 'The Sun Temple in Konark is an architectural marvel dedicated to the Sun God.',
+                'Golden Temple': 'The Golden Temple in Amritsar is a sacred Sikh pilgrimage site.',
+                'Biryani': 'Biryani is a fragrant rice dish cooked with spices and meat or vegetables.',
+                'Masala Dosa': 'Masala Dosa is a South Indian dish made of fermented rice and lentil batter.',
+                'Butter Chicken': 'Butter Chicken is a rich, creamy dish popular in North India.',
+                'Chaat': 'Chaat is a spicy, tangy street food enjoyed across India.'
+            };
+            info.innerHTML = descriptions[value] || '';
+            info.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        Vibrant Traditions of India
+    </header>
+    <h2>Exploring the Rich Heritage of India</h2>
+    <div class="content">
+        <p>India is a land of diverse cultures, languages, and traditions that have been passed down for centuries. From the colorful festivals like Diwali and Holi to the intricate classical dance forms like Bharatanatyam and Kathak, the richness of Indian heritage is unmatched. Traditional attire such as sarees and turbans reflect the artistic craftsmanship of each region. The country's architectural marvels, including temples, palaces, and forts, stand as testaments to its glorious past. Indian culture is a blend of ancient wisdom and modern vibrancy, making it one of the most fascinating cultures in the world.</p>
+        <img src="image.jpg" alt="Indian Culture">
+    </div>
+    <div class="menu">
+        <select onchange="showInfo(this.value)">
+            <option disabled selected>Festivals</option>
+            <option>Diwali</option>
+            <option>Holi</option>
+            <option>Pongal</option>
+            <option>Navratri</option>
+        </select>
+        <select onchange="showInfo(this.value)">
+            <option disabled selected>Dance Forms</option>
+            <option>Bharatanatyam</option>
+            <option>Kathak</option>
+            <option>Kuchipudi</option>
+            <option>Odissi</option>
+        </select>
+        <select onchange="showInfo(this.value)">
+            <option disabled selected>Traditional Clothing</option>
+            <option>Saree</option>
+            <option>Dhoti</option>
+            <option>Kurta-Pajama</option>
+            <option>Lehenga</option>
+        </select>
+        <select onchange="showInfo(this.value)">
+            <option disabled selected>Architectural Wonders</option>
+            <option>Taj Mahal</option>
+            <option>Hampi</option>
+            <option>Sun Temple</option>
+            <option>Golden Temple</option>
+        </select>
+        <select onchange="showInfo(this.value)">
+            <option disabled selected>Indian Cuisine</option>
+            <option>Biryani</option>
+            <option>Masala Dosa</option>
+            <option>Butter Chicken</option>
+            <option>Chaat</option>
+        </select>
+    </div>
+    <div id="info" class="info"></div>
+</body>
+</html>
